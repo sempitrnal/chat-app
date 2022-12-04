@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+.contacts::-webkit-scrollbar,
+.chat::-webkit-scrollbar {
+	width: 3px;
+	background: rgb(201, 201, 201);
+}
+.contacts::-webkit-scrollbar-thumb,
+.chat::-webkit-scrollbar-thumb {
+	width: 3px;
+	background: rgb(91, 91, 91);
+}
+@layer base {
+	label {
+		@apply mt-3 mb-1 font-mono font-thin;
+	}
+	.signup > div > input,
+	.login > div > input {
+		@apply ring-[1.8px] ring-[#989898] rounded-md px-3 py-2 w-[20rem] focus:border-none focus:ring-[2.5px] focus:ring-[#caa9ff] transition-all duration-300	 focus:outline-0;
+	}
+	.edit > div > input {
+		@apply ring-[1.8px] ring-[#c3c3c3] rounded-md px-3 py-1 w-max lg:w-[20rem] focus:border-none focus:ring-[2.5px] focus:ring-[#6fd29b] transition-all duration-300	 focus:outline-0;
+	}
+
+	.msg {
+		@apply px-5 py-2 rounded-xl my-1;
+	}
+
+	.fromSelf {
+		@apply bg-neutral-200 w-max;
+	}
+	.notFrom {
+		@apply bg-neutral-600 text-white;
+	}
+}
