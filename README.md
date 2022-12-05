@@ -1,5 +1,5 @@
 # chat-app
-chat app using react, node, express, socketio
+chat app using mern and socketio
 
 ## Installation
 
